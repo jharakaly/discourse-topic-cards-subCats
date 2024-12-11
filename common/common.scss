@@ -1,6 +1,7 @@
 :root {
   --d-border-radius-large: 20px;
 }
+
 //list
 .topic-cards-list {
   display: block;
@@ -131,7 +132,21 @@
       margin-bottom: 0.75rem;
 
       .badge-wrapper {
-        display: none;
+        display: inline-block; /* Ensure badges are visible */
+      }
+
+      .category-badge {
+        display: inline-block;
+        margin-right: 5px;
+        font-weight: bold;
+        color: var(--primary);
+      }
+
+      .subcategory-badge {
+        display: inline-block;
+        margin-right: 5px;
+        font-weight: normal;
+        color: var(--secondary-dark);
       }
     }
 
@@ -193,6 +208,15 @@
         max-height: 3.3em;
       }
     }
+  }
+}
+
+// remove fixed width and heat color from activity column
+.topic-list .age,
+.topic-list .activity {
+  width: inherit;
+  a {
+    color: inherit;
   }
 }
 
